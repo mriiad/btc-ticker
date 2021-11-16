@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 function BitcoinTracker() {
   const [bitcoinPrice, setBitcoinPrice] = useState(0);
   useEffect(() => {
-    const BITCOIN_URL =
-      "http://api.kraken.com/0/public/AssetPairs?pair=XXBTZUSD,XETHXXBT";
+    const BITCOIN_URL = "https://api.kraken.com/0/public/Ticker?pair=XXBTZEUR";
 
     fetch(BITCOIN_URL)
       .then((response) => {
