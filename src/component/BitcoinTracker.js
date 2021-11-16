@@ -19,7 +19,8 @@ function BitcoinTracker() {
   }, []);
 
   const trackBitcoinValue = () => {
-    const BITCOIN_URL = "https://api.kraken.com/0/public/Ticker?pair=XXBTZEUR";
+    const pair = "XXBTZEUR";
+    const BITCOIN_URL = "https://api.kraken.com/0/public/Ticker?pair=" + pair;
 
     fetch(BITCOIN_URL)
       .then((response) => {
